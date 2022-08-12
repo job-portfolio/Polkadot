@@ -1,0 +1,46 @@
+[package]
+name = "staking-miner"
+version = "0.9.10"
+authors = ["Parity Technologies <admin@parity.io>"]
+edition = "2018"
+
+[dependencies]
+codec = { package = "parity-scale-codec", version = "2.0.0" }
+tokio = { version = "0.2", features = ["macros"] }
+log = "0.4.11"
+env_logger = "0.8.3"
+structopt = "0.3.0"
+jsonrpsee-ws-client = { version = "0.3.0", default-features = false, features = ["tokio02"] }
+serde_json = "1.0"
+serde = "1.0.0"
+hex = "0.4.3"
+lazy_static = "1.4.0"
+paste = "1.0.5"
+thiserror = "1.0.26"
+
+remote-externalities = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-version = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-io = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sp-npos-elections = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+sc-transaction-pool-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+frame-system = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+frame-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+frame-election-provider-support = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+pallet-election-provider-multi-phase = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+pallet-staking = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+pallet-balances = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+pallet-transaction-payment = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
+core-primitives = { package = "polkadot-core-primitives", path = "../../core-primitives" }
+
+runtime-common = { package = "polkadot-runtime-common", path = "../../runtime/common" }
+polkadot-runtime = { path = "../../runtime/polkadot" }
+kusama-runtime = { path = "../../runtime/kusama" }
+westend-runtime = { path = "../../runtime/westend" }
+
+sub-tokens = { git = "https://github.com/paritytech/substrate-debug-kit", branch = "master" }
+
+[dev-dependencies]
+sp-version = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.10" }
